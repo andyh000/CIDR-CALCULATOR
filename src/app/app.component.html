@@ -1,5 +1,12 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div class="container">
+<mat-toolbar color="primary">
+  <span><mat-icon>mood</mat-icon></span>
+  <span class="text-center">CIDR Subnet Calculator</span>
+</mat-toolbar>
+
+
+<mat-card>
+  <mat-card-title>Network</mat-card-title>
   <form class="example-form">
     <mat-form-field class="example-full-width">
       <input matInput placeholder="IP" name='ipaddressinput' id='ipaddressinput'
@@ -7,9 +14,7 @@
              (keyup)="addressKeyEvent($event)"
              (change)="updateNetwork()">
     </mat-form-field>
-    &nbsp;
-    <strong>/</strong>
-    &nbsp;
+    <br/>
     <mat-form-field class="example-full-width">
       <input matInput placeholder="subnet" name='subnetInput' id='subnetInput'
              [(ngModel)]="subnetInputValue"
@@ -18,33 +23,37 @@
     </mat-form-field>
   </form>
 
-  <mat-divider></mat-divider>
+</mat-card>
+<mat-card>
+  <mat-card-title>Result</mat-card-title>
+    <table>
+      <tr>
+        <td>
+          Network
+        </td>
+        <td>{{result.network}}</td>
+      </tr>
+      <tr>
+        <td>Subnet mask</td>
+        <td>{{result.subnetMask}}</td>
+      </tr>
+      <tr>
+        <td>Range</td>
+        <td>{{result.range}}</td>
+      </tr>
+      <tr>
+        <td>Usable IPs</td>
+        <td>{{result.useableIPs}}</td>
+      </tr>
+    </table>
 
-  <table>
-    <tr>
-      <td>
-        Network
-      </td>
-      <td>{{result.network}}</td>
-    </tr>
-    <tr>
-      <td>Subnet mask</td>
-      <td>{{result.subnetMask}}</td>
-    </tr>
-    <tr>
-      <td>Range</td>
-      <td>{{result.range}}</td>
-    </tr>
-    <tr>
-      <td>Usable IPs</td>
-      <td>{{result.useableIPs}}</td>
-    </tr>
-  </table>
-  <mat-divider></mat-divider>
 
-  <div data-role='footer' style='text-align: center;'>
-    <a href='https://attend2it.co.uk'>
-      <img src='/assets/logo-tag-small.png' alt='Attend2IT' />
-    </a>
-  </div>
+</mat-card>
+
+
+<div data-role='footer' class="footer">
+  <mat-divider></mat-divider>
+  <a href='https://attend2it.co.uk'>
+    <img src='/assets/logo-tag-small.png' alt='Attend2IT' />
+  </a>
 </div>
