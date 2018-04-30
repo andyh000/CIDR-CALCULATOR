@@ -1,0 +1,14 @@
+div.container{
+  width: 90%;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+table{
+  
+}
+
+table tr td{
+  border-bottom: 1px solid #cccccc;
+  padding: 2px 4px;
+}
