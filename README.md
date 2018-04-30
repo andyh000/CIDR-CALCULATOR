@@ -1,5 +1,8 @@
 # CidrApp
 
+A simple Progressive Web App to calculate subnets and networks. It also works offline thanks to Web Worker magic.
+
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.0-rc.5.
 
 ## Demo / Live version
