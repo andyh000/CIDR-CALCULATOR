@@ -64,7 +64,7 @@ export class AppComponent {
     const split = Math.pow(2, rem);
     const block = 256 / split;
     const baseIP = ipSplit[base-1];
-    let blockStart = baseIP - (baseIP % block);
+    let blockStart = baseIP - (baseIP % block) -1;
     let blockEnd = blockStart + block - 1;
     if (base == 4) {
       blockStart++;
@@ -102,7 +102,7 @@ export class AppComponent {
 
       this.result.range = `${fix}${blockStart}${zeros} -  ${fix}${blockEnd}${ends}`;
       if (base == 4) {
-        this.result.network = `${fix}${blockStart-1} / ${slash}`;
+        this.result.network = `${fix}${blockStart} / ${slash}`;
       } else {
         this.result.network = `${fix}${blockStart}.0 / ${slash}`;
       }
