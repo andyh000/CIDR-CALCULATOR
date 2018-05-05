@@ -1,6 +1,6 @@
 {
-  "name": "cidr-app",
-  "short_name": "cidr-app",
+  "name": "Subnet Calculator",
+  "short_name": "SubnetCalc",
   "theme_color": "#1976d2",
   "background_color": "#fafafa",
   "display": "standalone",
