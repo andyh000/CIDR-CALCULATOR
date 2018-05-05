@@ -64,10 +64,10 @@ export class AppComponent {
     const split = Math.pow(2, rem);
     const block = 256 / split;
     const baseIP = ipSplit[base-1];
-    let blockStart = baseIP - (baseIP % block) -1;
+    let blockStart = baseIP - (baseIP % block);
     let blockEnd = blockStart + block - 1;
     if (base == 4) {
-      blockStart++;
+     // blockStart++;
       blockEnd--;
     }
     this.result.useableIPs = Math.pow(2, (32 - slash)) - 2;
@@ -89,7 +89,7 @@ export class AppComponent {
         zeros += '.';
         ends += '.';
         if (i == 4) {
-          zeros += "1";
+          zeros += "0";
           ends += "254";
         } else {
           zeros += "0";
