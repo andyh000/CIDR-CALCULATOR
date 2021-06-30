@@ -1,5 +1,4 @@
 import { Component, ViewChild, ElementRef } from '@angular/core';
-import { MatInput } from '@angular/material';
 
 @Component({
   selector: 'app-root',
